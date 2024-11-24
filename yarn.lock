@@ -22,9 +22,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.22.10":
-  version: 7.25.7
-  resolution: "@babel/cli@npm:7.25.7"
+"@babel/cli@npm:^7.25.9":
+  version: 7.25.9
+  resolution: "@babel/cli@npm:7.25.9"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.25"
     "@nicolo-ribaudo/chokidar-2": "npm:2.1.8-no-fsevents.3"
@@ -45,7 +45,7 @@ __metadata:
   bin:
     babel: ./bin/babel.js
     babel-external-helpers: ./bin/babel-external-helpers.js
-  checksum: 10/4420a58c6596146536808ea4ae1cea0bade806a5f46ce19c95f4e7598661c06cd0a6ce586c2e81784141c8982c2b8c19b75d27ab621317f2a3398ae9b0cc4d9d
+  checksum: 10/0c331df5e42a53b793fd36d988d696dfb3d0322fa17a6ff7ccd682c85c32b896804fea308ebee6e2a03c9fb70164308bd50044b486d6e8c1f3f92435d37bbc6c
   languageName: node
   linkType: hard
 
@@ -6361,7 +6361,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "lucide-nativewind@workspace:."
   dependencies:
-    "@babel/cli": "npm:^7.22.10"
+    "@babel/cli": "npm:^7.25.9"
     "@babel/core": "npm:^7.22.10"
     "@babel/preset-env": "npm:^7.22.10"
     "@babel/preset-react": "npm:^7.18.6"
