@@ -5,7 +5,7 @@ let packageJson = fs.readFileSync('package.json');
 let packageObj = JSON.parse(packageJson);
 
 // Specify your dependency
-let dependency = 'lucide';
+let dependency = 'lucide-react-native';
 
 // Get the version of the dependency
 let dependencyVersion = packageObj.devDependencies[dependency];
