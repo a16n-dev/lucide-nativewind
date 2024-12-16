@@ -23,7 +23,7 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.4.1",
+    "@types/node": "^22.10.2",
     "@types/react-dom": "^18.3.0",
     "@vitest/ui": "^2.0.1",
     "cross-env": "^7.0.3",
