@@ -6377,7 +6377,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     jest: "npm:^29.7.0"
     jsdom: "npm:^25.0.0"
-    lucide: "npm:0.456.0"
+    lucide: "npm:0.469.0"
     lucide-react-native: "npm:^0.460.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^18.2.0"
@@ -6407,10 +6407,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide@npm:0.456.0":
-  version: 0.456.0
-  resolution: "lucide@npm:0.456.0"
-  checksum: 10/2b5b964449cb539a6108b7841c25a4fec528555c371deb627eff5f4cd8acad8ae20b65b9e58b343b1c4beac3f75a855d202068cf2ecf3837671b29bf83755fa6
+"lucide@npm:0.469.0":
+  version: 0.469.0
+  resolution: "lucide@npm:0.469.0"
+  checksum: 10/6c8c35bdc6d5fa2ae0b471d25d874ac05dd0424d7c83f8bdc1a0048bc7cd6ec8dda9f6a63df958ad4b6691084495d6fe912bdf80f4260151b1c6a956ab9df446
   languageName: node
   linkType: hard
 
