@@ -49,7 +49,7 @@ export default ${iconName};
 });
 
 // generate barrel file
-const barrelExports = Object.entries(icons).map(([iconName]) => `export {default as ${iconName}, default as ${iconName}Icon} from './icons/${toKebabCase(iconName)}';`).join("\n");
+const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}, default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`).join("\n");
 
 writeFileSync(`src/index.ts`, barrelExports);
 
