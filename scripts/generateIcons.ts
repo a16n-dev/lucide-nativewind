@@ -50,7 +50,7 @@ export default iconWithClassName(${iconName});
 // generate barrel file
 const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}, default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
 
-const extraBarrelExports = [`export { LucideIcon, LucideProps } from 'lucide-react-native'`]
+const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`]
 barrelExports.push(...extraBarrelExports)
 
 writeFileSync(`src/index.ts`, barrelExports.join("\n"));
