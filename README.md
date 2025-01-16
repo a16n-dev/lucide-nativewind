@@ -24,6 +24,16 @@ All icons can be imported the same as if using the `lucide-react-native` package
 + import { ArrowLeftCircleIcon } from 'lucide-nativewind';
 ```
 
+## Custom Icons
+Custom icons can be wrapped with `iconWithClassName` to add the `className` prop.
+
+```jsx
+import { iconWithClassName } from 'lucide-nativewind';
+import MyCustomIcon from './MyCustomIcon';
+
+const MyCustomIconWithClassName = iconWithClassName(MyCustomIcon);
+```
+
 ## Versioning
 The version is automatically kept in sync with `lucide-react-native`
 

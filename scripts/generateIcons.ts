@@ -40,7 +40,7 @@ import iconWithClassName from '../iconWithClassName';
 /**
  *  [${iconName} on lucide.dev](https://lucide.dev/icons/${toKebabCase(iconName)})
  */    
-;
+
 export default iconWithClassName(${iconName});
 `
     // write the file to disk
@@ -50,16 +50,22 @@ export default iconWithClassName(${iconName});
 // generate barrel file
 const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}, default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
 
-const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`]
+const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`, `export { default as iconWithClassName } from './iconWithClassName'`]
 barrelExports.push(...extraBarrelExports)
 
 writeFileSync(`src/index.ts`, barrelExports.join("\n"));
 
 // generate iconWithClassName file
-const iconWithClassNameFile = `import type { LucideIcon } from 'lucide-react-native';
+const iconWithClassNameFile = `import { ReactNode } from 'react';
+import type { LucideProps } from 'lucide-react-native';
 import { cssInterop } from 'nativewind';
 
-export default function iconWithClassName(icon: LucideIcon) {
+type LooseLucideIconType = (props: LucideProps) => ReactNode;
+
+/**
+ * Helper function that wraps a LucideIcon with \`cssInterop\` to allow for styling with the \`className\` prop
+ */
+export default function iconWithClassName(icon: LooseLucideIconType) {
   return cssInterop(icon, {
     className: {
       target: 'style',
@@ -69,8 +75,7 @@ export default function iconWithClassName(icon: LucideIcon) {
       },
     },
   });
-}
-`
+}`
 
 
 writeFileSync(`src/iconWithClassName.ts`, iconWithClassNameFile);
