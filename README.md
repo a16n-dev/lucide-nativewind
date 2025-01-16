@@ -1,4 +1,8 @@
 # Lucide Icons for React Native with NativeWind
+  [![npm](https://img.shields.io/npm/v/lucide-nativewind?color=blue)](https://www.npmjs.com/package/lucide-nativewind)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-nativewind)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  
 A drop in replacement for `lucide-react-native` to work with NativeWind. It provides [Lucide icons](https://lucide.dev/) with an additional `className` prop to allow for easy integration with [NativeWind](https://native-wind.js.org/).
 
 ## Installation
