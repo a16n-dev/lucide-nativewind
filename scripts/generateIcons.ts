@@ -50,22 +50,24 @@ export default iconWithClassName(${iconName});
 // generate barrel file
 const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}, default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
 
-const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`, `export { default as iconWithClassName } from './iconWithClassName'`]
+const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`, `export type { LucidePropsWithClassName } from './iconWithClassName'`,  `export { default as iconWithClassName } from './iconWithClassName'`]
 barrelExports.push(...extraBarrelExports)
 
 writeFileSync(`src/index.ts`, barrelExports.join("\n"));
 
 // generate iconWithClassName file
-const iconWithClassNameFile = `import { ReactNode } from 'react';
+const iconWithClassNameFile = `import {FunctionComponent} from 'react';
 import type { LucideProps } from 'lucide-react-native';
 import { cssInterop } from 'nativewind';
 
-type LooseLucideIconType = (props: LucideProps) => ReactNode;
+export type LucidePropsWithClassName = LucideProps & {
+    className?: string;
+}
 
 /**
  * Helper function that wraps a LucideIcon with \`cssInterop\` to allow for styling with the \`className\` prop
  */
-export default function iconWithClassName(icon: LooseLucideIconType) {
+export default function iconWithClassName(icon: FunctionComponent<LucideProps>): FunctionComponent<LucidePropsWithClassName> {
   return cssInterop(icon, {
     className: {
       target: 'style',
@@ -74,7 +76,7 @@ export default function iconWithClassName(icon: LooseLucideIconType) {
         opacity: true,
       },
     },
-  });
+  }) as any;
 }`
 
 
