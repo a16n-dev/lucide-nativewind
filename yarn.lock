@@ -6178,7 +6178,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     jest: "npm:^29.7.0"
     jsdom: "npm:^25.0.0"
-    lucide-react-native: "npm:^0.471.0"
+    lucide-react-native: "npm:0.471.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -6197,7 +6197,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide-react-native@npm:^0.471.0":
+"lucide-react-native@npm:0.471.0":
   version: 0.471.0
   resolution: "lucide-react-native@npm:0.471.0"
   peerDependencies:
