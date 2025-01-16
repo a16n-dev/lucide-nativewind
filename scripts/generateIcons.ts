@@ -1,4 +1,4 @@
-import {icons} from "lucide";
+import {icons} from "lucide-react-native";
 import {writeFileSync, mkdirSync, rmSync} from "fs";
 
 type SVGProps = Record<string, string | number>;
