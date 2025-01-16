@@ -6178,6 +6178,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     jest: "npm:^29.7.0"
     jsdom: "npm:^25.0.0"
+    lucide: "npm:0.471.0"
     lucide-react-native: "npm:0.471.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^18.2.0"
@@ -6205,6 +6206,13 @@ __metadata:
     react-native: "*"
     react-native-svg: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
   checksum: 10/b994043b0eb9a65481351b1ddd52439e3251da3d4512aea5f604894a94abc233b1c6e27e9934d682cab39ccc72906db4df37d40b18b6573e2ebc2bbe7050f53a
+  languageName: node
+  linkType: hard
+
+"lucide@npm:0.471.0":
+  version: 0.471.0
+  resolution: "lucide@npm:0.471.0"
+  checksum: 10/db3d5d94dbf1dfc71656e5eaea2ac4fe8bc508e1298fefbcfcadc661be7e2f6c2a08394a063f368ea1872102181c9f0595872351a0c308bad2ab8d520149ba2e
   languageName: node
   linkType: hard
 
