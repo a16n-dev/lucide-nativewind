@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import pkgData from '../package.json' assert { type: 'json' };
+import pkgData from '../package.json' with { type: 'json' };
 
 const newPkgData = JSON.parse(JSON.stringify(pkgData));
 
