@@ -70,20 +70,5 @@ export default function iconWithClassName(icon: LucideIcon) {
 }
 `
 
-// generate test file
-const testFile = `import '@testing-library/jest-dom'
-import {render, screen} from "@testing-library/react";
-import { expect, test } from 'vitest'
-${Object.entries(icons).map(([iconName]) => `import ${iconName} from "./${ICON_PATH}/${toKebabCase(iconName)}";`).join("\n")}
-
-${Object.entries(icons).map(([iconName]) => `test('${iconName} renders without error', () => {
-    render(<${iconName} data-testid={"svg-element"}/>)
-
-    expect(screen.getByTestId('svg-element')).toBeInTheDocument()
-})`).join("\n\n")}
-`
-
-writeFileSync(`src/icons.test.tsx`, testFile);
-
 
 writeFileSync(`src/iconWithClassName.ts`, iconWithClassNameFile);
