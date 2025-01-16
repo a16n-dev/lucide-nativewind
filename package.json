@@ -38,14 +38,13 @@
     "react-native-svg": "^15.9.0",
     "rimraf": "^6.0.1",
     "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
     "tslib": "^2.6.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },
   "scripts": {
     "generate": "tsx scripts/generateIcons",
-    "build": "yarn generate && rimraf dist && yarn build:esm && yarn build:cjs && yarn build:tsc && ts-node --esm scripts/copyFiles.ts",
+    "build": "yarn generate && rimraf dist && yarn build:esm && yarn build:cjs && yarn build:tsc && node --loader ts-node/esm scripts/copyFiles.ts",
     "build:esm": "cross-env BABEL_ENV=esmUnbundled babel src --extensions '.ts,.tsx' --out-dir 'dist/esm' --copy-files --no-copy-ignored",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.ts,.tsx' --out-dir 'dist/cjs'",
     "build:tsc": "tsc --project tsconfig.prod.json",
