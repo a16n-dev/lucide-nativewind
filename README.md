@@ -1,4 +1,4 @@
-# Lucide Icons for ReactNative with NativeWind
+# Lucide Icons for React Native with NativeWind
 A drop in replacement for `lucide-react-native` to work with NativeWind. It provides [Lucide icons](https://lucide.dev/) with an additional `className` prop to allow for easy integration with [NativeWind](https://native-wind.js.org/).
 
 ## Installation
@@ -19,8 +19,9 @@ yarn add lucide-nativewind
 
 
 All icons can be imported the same as if using the `lucide-react-native` package
-```jsx
-import { ArrowLeftCircleIcon } from 'lucide-nativeWind';
+```diff
+- import { ArrowLeftCircleIcon } from 'lucide-react-native';
++ import { ArrowLeftCircleIcon } from 'lucide-nativewind';
 ```
 
 ## Versioning
