@@ -4,6 +4,13 @@ import pkgData from '../package.json' with { type: 'json' };
 
 const newPkgData = JSON.parse(JSON.stringify(pkgData));
 
+// Add `lucide-react-native` as a dependency
+if(!newPkgData.dependencies) {
+    newPkgData.dependencies = {};
+}
+
+newPkgData.dependencies['lucide-react-native'] = newPkgData.devDependencies['lucide'];
+
 // Delete scripts
 delete newPkgData.scripts;
 // Delete devDependencies

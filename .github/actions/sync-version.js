@@ -8,6 +8,4 @@ let dependencyVersion = packageObj.dependencies['lucide-react-native'];
 
 packageObj.version = dependencyVersion;
 
-packageObj.devDependencies['lucide'] = dependencyVersion;
-
 fs.writeFileSync('package.json', JSON.stringify(packageObj, null, 2));

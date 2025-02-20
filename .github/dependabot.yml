@@ -12,6 +12,8 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "weekly"
-    # Ignore lucide updates, since we just care about lucide-react-native
-    ignore:
-      - dependency-name: "lucide:*"
+    groups:
+      lucide:
+        patterns:
+          - "lucide"
+          - "lucide-react-native"
