@@ -48,7 +48,7 @@ export default iconWithClassName(${iconName});
 });
 
 // generate barrel file
-const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}, default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
+const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
 
 const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`, `export type { LucidePropsWithClassName } from './iconWithClassName'`,  `export { default as iconWithClassName } from './iconWithClassName'`]
 barrelExports.push(...extraBarrelExports)
@@ -74,6 +74,8 @@ export default function iconWithClassName(icon: FunctionComponent<LucideProps>):
       nativeStyleToProp: {
         color: true,
         opacity: true,
+        width: true,
+        height: true,
       },
     },
   }) as any;
