@@ -56,7 +56,7 @@ Object.entries(icons).forEach(([iconName, iconContent]) => {
     const filename = `src/${ICON_PATH}/${iconNameLowerCase}.web.tsx`;
 
 
-    const fileContent = `export { ${iconName} as default } from "lucide-react";`
+    const fileContent = `import { ${iconName} } from "lucide-react";\nexport default ${iconName};`
     // write the file to disk
     writeFileSync(filename, fileContent);
 });
