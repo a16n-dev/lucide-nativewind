@@ -1,0 +1,19 @@
+{
+  "name": "@nativewind-icons/core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-native": "catalog:",
+    "react-native-svg": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "react": "catalog:",
+    "react-native": "catalog:",
+    "react-native-svg": "catalog:"
+  },
+  "dependencies": {}
+}

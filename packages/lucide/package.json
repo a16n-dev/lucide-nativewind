@@ -1,0 +1,26 @@
+{
+  "name": "@nativewind-icons/lucide",
+  "description": "Icon sets available for React Native, configured with NativeWind",
+  "version": "0.475.0",
+  "author": "Alexander Nicholson",
+  "homepage": "https://github.com/a16n-dev/lucide-nativewind#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a16n-dev/lucide-nativewind.git"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@nativewind-icons/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "icons",
+    "svg",
+    "nativewind"
+  ]
+}
