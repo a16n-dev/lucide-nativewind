@@ -10,6 +10,7 @@ if(!newPkgData.dependencies) {
 }
 
 newPkgData.dependencies['lucide-react-native'] = newPkgData.devDependencies['lucide'];
+newPkgData.dependencies['lucide-react'] = newPkgData.devDependencies['lucide'];
 
 // Delete scripts
 delete newPkgData.scripts;

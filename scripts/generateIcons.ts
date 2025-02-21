@@ -63,11 +63,13 @@ Object.entries(icons).forEach(([iconName, iconContent]) => {
 
 // generate barrel file
 const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
+const barrelExportsWeb = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}.web';`);
 
 const extraBarrelExports = [`export type { LucideIcon, LucideProps } from 'lucide-react-native'`, `export type { LucidePropsWithClassName } from './iconWithClassName'`,  `export { default as iconWithClassName } from './iconWithClassName'`]
 barrelExports.push(...extraBarrelExports)
 
 writeFileSync(`src/index.ts`, barrelExports.join("\n"));
+writeFileSync(`src/index.web.ts`, barrelExportsWeb.join("\n"));
 
 // generate iconWithClassName file
 const iconWithClassNameFile = `import {FunctionComponent} from 'react';
