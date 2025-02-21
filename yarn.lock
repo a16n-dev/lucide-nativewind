@@ -6235,6 +6235,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jsdom: "npm:^25.0.0"
     lucide: "npm:0.475.0"
+    lucide-react: "npm:0.475.0"
     lucide-react-native: "npm:0.475.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^19.0.0"
@@ -6248,6 +6249,7 @@ __metadata:
     tsx: "npm:^4.19.2"
     typescript: "npm:^5.7.3"
   peerDependencies:
+    lucide-react: ^0.460.0
     lucide-react-native: ^0.460.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
@@ -6262,6 +6264,15 @@ __metadata:
     react-native: "*"
     react-native-svg: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
   checksum: 10/fb1f02903cc27de2e2f60691e6aa1382c90955ce128b35941d6ab181aafa35df5b016303593d4f7104cb0d0fd81c01a8f7ce0293e8e303e06ecfaf81d986123d
+  languageName: node
+  linkType: hard
+
+"lucide-react@npm:0.475.0":
+  version: 0.475.0
+  resolution: "lucide-react@npm:0.475.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/a6a9504b1596dfee3a2a5196d785332dc51f9046dbfc47d73a22eb0b718553244187261b3e11184e6b563483330cb95a846ed213150151b6c0aedd2a1048d638
   languageName: node
   linkType: hard
 

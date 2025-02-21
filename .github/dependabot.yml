@@ -17,3 +17,4 @@ updates:
         patterns:
           - "lucide"
           - "lucide-react-native"
+          - "lucide-react"

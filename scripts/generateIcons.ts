@@ -47,6 +47,20 @@ export default iconWithClassName(${iconName});
     writeFileSync(filename, fileContent);
 });
 
+// Write a seperate web export
+Object.entries(icons).forEach(([iconName, iconContent]) => {
+
+    const iconNameLowerCase = toKebabCase(iconName);
+
+    // filename is icon.ts
+    const filename = `src/${ICON_PATH}/${iconNameLowerCase}.web.tsx`;
+
+
+    const fileContent = `export { ${iconName} as default } from "lucide-react";`
+    // write the file to disk
+    writeFileSync(filename, fileContent);
+});
+
 // generate barrel file
 const barrelExports = Object.entries(icons).map(([iconName]) => `export { default as ${iconName}Icon, default as Lucide${iconName} } from './icons/${toKebabCase(iconName)}';`);
 
