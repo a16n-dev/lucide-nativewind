@@ -1,7 +1,7 @@
 {
   "name": "lucide-nativewind",
   "description": "Lucide icons for React Native, with a ClassName prop for nativewind",
-  "version": "0.475.3",
+  "version": "0.475.4",
   "packageManager": "yarn@4.5.2",
   "sideEffects": false,
   "author": "Alexander Nicholson",
@@ -55,8 +55,6 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "lucide-react": "^0.460.0",
-    "lucide-react-native": "^0.460.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
