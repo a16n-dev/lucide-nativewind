@@ -6249,8 +6249,6 @@ __metadata:
     tsx: "npm:^4.19.2"
     typescript: "npm:^5.7.3"
   peerDependencies:
-    lucide-react: ^0.460.0
-    lucide-react-native: ^0.460.0
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
   languageName: unknown
