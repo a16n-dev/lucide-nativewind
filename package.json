@@ -30,7 +30,7 @@
     "@vitest/ui": "^3.0.5",
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
-    "jsdom": "^25.0.0",
+    "jsdom": "^26.0.0",
     "lucide": "0.477.0",
     "lucide-react": "0.477.0",
     "lucide-react-native": "0.477.0",
