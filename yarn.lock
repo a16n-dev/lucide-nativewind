@@ -2798,11 +2798,11 @@ __metadata:
   linkType: hard
 
 "@testing-library/user-event@npm:^14.4.3":
-  version: 14.6.0
-  resolution: "@testing-library/user-event@npm:14.6.0"
+  version: 14.6.1
+  resolution: "@testing-library/user-event@npm:14.6.1"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 10/01a7481642ceda10324ff5356e3cfd9c6131b0cecbcbdd5938096d4d3f8ce9e548e9b460ef35bad8f3649dc392c808044a5abd78de8218a4bc21c91125be85df
+  checksum: 10/34b74fff56a0447731a94b40d4cf246deb8dbc1c1e3aec93acd1c3377a760bb062e979f1572bb34ec164ad28ee2a391744b42d0d6d6cc16c4ce527e5e09610e1
   languageName: node
   linkType: hard
 
