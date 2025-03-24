@@ -1,7 +1,7 @@
 {
   "name": "lucide-nativewind",
   "description": "Lucide icons for React Native, with a ClassName prop for nativewind",
-  "version": "0.482.0",
+  "version": "0.483.0",
   "packageManager": "yarn@4.5.2",
   "sideEffects": false,
   "author": "Alexander Nicholson",
