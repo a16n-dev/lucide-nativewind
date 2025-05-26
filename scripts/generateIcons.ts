@@ -72,7 +72,7 @@ writeFileSync(`src/index.ts`, barrelExports.join("\n"));
 writeFileSync(`src/index.web.ts`, barrelExportsWeb.join("\n"));
 
 // generate iconWithClassName file
-const iconWithClassNameFile = `import {FunctionComponent} from 'react';
+const iconWithClassNameFile = `import {ReactNode} from 'react';
 import type { LucideProps } from 'lucide-react-native';
 import { cssInterop } from 'nativewind';
 
@@ -83,7 +83,7 @@ export type LucidePropsWithClassName = LucideProps & {
 /**
  * Helper function that wraps a LucideIcon with \`cssInterop\` to allow for styling with the \`className\` prop
  */
-export default function iconWithClassName(icon: FunctionComponent<LucideProps>): FunctionComponent<LucidePropsWithClassName> {
+export default function iconWithClassName(icon: (props: LucideProps) => ReactNode): (props: LucidePropsWithClassName) => ReactNode {
   return cssInterop(icon, {
     className: {
       target: 'style',
