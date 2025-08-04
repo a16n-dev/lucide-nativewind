@@ -28,7 +28,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.3",
     "@vitest/ui": "^3.0.5",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.0.0",
     "jest": "^30.0.2",
     "jsdom": "^26.0.0",
     "lucide": "0.522.0",
