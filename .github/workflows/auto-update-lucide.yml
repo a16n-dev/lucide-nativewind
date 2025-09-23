@@ -1,0 +1,81 @@
+name: Auto Update Lucide Dependencies
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  update-lucide:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check for lucide updates
+        id: check-updates
+        run: |
+          # Get current lucide version
+          CURRENT_VERSION=$(node -p "require('./package.json').devDependencies.lucide")
+          echo "Current version: $CURRENT_VERSION"
+
+          # Get latest lucide version from npm
+          LATEST_VERSION=$(npm view lucide version)
+          echo "Latest version: $LATEST_VERSION"
+
+          # Compare versions
+          if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
+            echo "Update available: $CURRENT_VERSION -> $LATEST_VERSION"
+            echo "update_available=true" >> $GITHUB_OUTPUT
+            echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+            echo "latest_version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+          else
+            echo "No update available"
+            echo "update_available=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update lucide dependencies
+        if: steps.check-updates.outputs.update_available == 'true'
+        run: |
+          LATEST_VERSION="${{ steps.check-updates.outputs.latest_version }}"
+          echo "Updating to version $LATEST_VERSION"
+
+          # Update all lucide dependencies to the latest version
+          yarn add -D lucide@$LATEST_VERSION lucide-react@$LATEST_VERSION lucide-react-native@$LATEST_VERSION
+
+          # Update package.json version to match lucide version
+          node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.version = '$LATEST_VERSION';
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+
+      - name: Update lockfile
+        if: steps.check-updates.outputs.update_available == 'true'
+        run: yarn install
+
+      - name: Commit and push changes
+        if: steps.check-updates.outputs.update_available == 'true'
+        run: |
+          git config --local user.email "alex@a16n.dev"
+          git config --local user.name "A16N"
+          git add .
+          git commit -m "Update lucide dependencies to ${{ steps.check-updates.outputs.latest_version }}"
+          git push origin main
