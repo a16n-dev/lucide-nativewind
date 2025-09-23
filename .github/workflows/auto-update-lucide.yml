@@ -93,6 +93,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - name: Automatic GitHub Release
         uses: justincy/github-action-npm-release@2.0.2
@@ -108,7 +109,9 @@ jobs:
     if: needs.create-release.outputs.released == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup node
         uses: actions/setup-node@v4
