@@ -125,9 +125,6 @@ jobs:
       - name: Build project
         run: yarn build
 
-#      - name: Run tests
-#        run: yarn test
-
       - name: Publish to npm
         run: cd dist && npm publish
         env:
