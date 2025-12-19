@@ -39,10 +39,10 @@ Object.entries(icons).forEach(([iconName, iconContent]) => {
 import iconWithClassName from '../iconWithClassName';
 /**
  *  [${iconName} on lucide.dev](https://lucide.dev/icons/${toKebabCase(iconName)})
- */    
+ */
 
 export default iconWithClassName(${iconName});
-`
+`;
     // write the file to disk
     writeFileSync(filename, fileContent);
 });
@@ -74,17 +74,17 @@ writeFileSync(`src/index.web.ts`, barrelExportsWeb.join("\n"));
 // generate iconWithClassName file
 const iconWithClassNameFile = `import {ReactNode} from 'react';
 import type { LucideProps } from 'lucide-react-native';
-import { cssInterop } from 'nativewind';
+import { styled } from 'react-native-css';
 
 export type LucidePropsWithClassName = LucideProps & {
     className?: string;
 }
 
 /**
- * Helper function that wraps a LucideIcon with \`cssInterop\` to allow for styling with the \`className\` prop
+ * Helper function that wraps a LucideIcon with \`styled\` to allow for styling with the \`className\` prop
  */
 export default function iconWithClassName(icon: (props: LucideProps) => ReactNode): (props: LucidePropsWithClassName) => ReactNode {
-  return cssInterop(icon, {
+  return styled(icon, {
     className: {
       target: 'style',
       nativeStyleToProp: {
@@ -95,7 +95,7 @@ export default function iconWithClassName(icon: (props: LucideProps) => ReactNod
       },
     },
   }) as any;
-}`
+}`;
 
 
 writeFileSync(`src/iconWithClassName.ts`, iconWithClassNameFile);
