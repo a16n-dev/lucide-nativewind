@@ -7,6 +7,7 @@ on:
   workflow_dispatch: # Allow manual triggering
 
 permissions:
+  id-token: write  # Required for OIDC
   contents: write
 
 jobs:
@@ -116,8 +117,8 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: yarn
@@ -126,6 +127,5 @@ jobs:
         run: yarn build
 
       - name: Publish to npm
-        run: cd dist && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: dist
+        run: npm publish
