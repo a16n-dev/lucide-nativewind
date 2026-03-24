@@ -6906,9 +6906,9 @@ __metadata:
     cross-env: "npm:^10.0.0"
     jest: "npm:^30.0.2"
     jsdom: "npm:^26.0.0"
-    lucide: "npm:0.577.0"
-    lucide-react: "npm:0.577.0"
-    lucide-react-native: "npm:0.577.0"
+    lucide: "npm:1.0.1"
+    lucide-react: "npm:1.0.1"
+    lucide-react-native: "npm:1.0.1"
     nativewind: "npm:^4.1.23"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
@@ -6926,30 +6926,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide-react-native@npm:0.577.0":
-  version: 0.577.0
-  resolution: "lucide-react-native@npm:0.577.0"
+"lucide-react-native@npm:1.0.1":
+  version: 1.0.1
+  resolution: "lucide-react-native@npm:1.0.1"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-native: "*"
     react-native-svg: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
-  checksum: 10/d0fb0bc2bc7a43226ca52207d3c625e89344cc53980111aeecc5d8291034d0f9faf38df6e84a5024284634579c835468d570588c1d2532936835f405cbeaa44e
+  checksum: 10/e241554c217caaf6d55496090ad167e03ad26a53e3e3ac77d50da1d2444c42c7b6870860066dad151a9a776c91d881162c55109f51466f723e56df069521ba60
   languageName: node
   linkType: hard
 
-"lucide-react@npm:0.577.0":
-  version: 0.577.0
-  resolution: "lucide-react@npm:0.577.0"
+"lucide-react@npm:1.0.1":
+  version: 1.0.1
+  resolution: "lucide-react@npm:1.0.1"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/dcc834b83ff2b3fca4898672ead3ac3f6316c4c391a4ccfc94e5fdd4a08e834ab2d80de7503e3bc9f6fce8333d446c7263cfb5f6f4fc54b5f7569c4e53340e47
+  checksum: 10/a99e9a12f78d10d9479d0686843691c89469c1ffb60572cc032ab67e278ec8178f5e48bdd28aa9f4a89b6d69deb788f8e4ba097009ff71cb9d91c8510fbb23c3
   languageName: node
   linkType: hard
 
-"lucide@npm:0.577.0":
-  version: 0.577.0
-  resolution: "lucide@npm:0.577.0"
-  checksum: 10/d0c0cf3eda992f3419ee865f1b4628da4fb5554191b235a28961e0f12128e74250bd8130758a74a3d9ed6cb4b478d4e7f923e1fc6e37b0782067027b60036f0d
+"lucide@npm:1.0.1":
+  version: 1.0.1
+  resolution: "lucide@npm:1.0.1"
+  checksum: 10/ac32e52ddf97015bbfd06119e938c781a867d60b220fc7af59f6bd23fb8e2e61ef8fcaddd1ffc6080ab2f98f414158b2e143a713e9adb3464df16daf8a8a9b03
   languageName: node
   linkType: hard
 
