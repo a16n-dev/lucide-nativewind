@@ -6906,9 +6906,9 @@ __metadata:
     cross-env: "npm:^10.0.0"
     jest: "npm:^30.0.2"
     jsdom: "npm:^26.0.0"
-    lucide: "npm:1.0.1"
-    lucide-react: "npm:1.0.1"
-    lucide-react-native: "npm:1.0.1"
+    lucide: "npm:1.6.0"
+    lucide-react: "npm:1.6.0"
+    lucide-react-native: "npm:1.6.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
@@ -6926,30 +6926,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide-react-native@npm:1.0.1":
-  version: 1.0.1
-  resolution: "lucide-react-native@npm:1.0.1"
+"lucide-react-native@npm:1.6.0":
+  version: 1.6.0
+  resolution: "lucide-react-native@npm:1.6.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-native: "*"
     react-native-svg: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
-  checksum: 10/e241554c217caaf6d55496090ad167e03ad26a53e3e3ac77d50da1d2444c42c7b6870860066dad151a9a776c91d881162c55109f51466f723e56df069521ba60
+  checksum: 10/2b3f6b829727a5d8e9dc5373a09197023853b02a882fa40332ce07f7004480e7be399fa680746c1b7705421524c189b44390ed475e992c6b7cb1ed918aab5c6b
   languageName: node
   linkType: hard
 
-"lucide-react@npm:1.0.1":
-  version: 1.0.1
-  resolution: "lucide-react@npm:1.0.1"
+"lucide-react@npm:1.6.0":
+  version: 1.6.0
+  resolution: "lucide-react@npm:1.6.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/a99e9a12f78d10d9479d0686843691c89469c1ffb60572cc032ab67e278ec8178f5e48bdd28aa9f4a89b6d69deb788f8e4ba097009ff71cb9d91c8510fbb23c3
+  checksum: 10/a4edac31bb32d54687ce9de499a855c4ba04c2f396102ba094b7b138b347ca4236177a761b851b6ff9153c8378102901b82b1cec31b724982ff1bcc1bbca4d11
   languageName: node
   linkType: hard
 
-"lucide@npm:1.0.1":
-  version: 1.0.1
-  resolution: "lucide@npm:1.0.1"
-  checksum: 10/ac32e52ddf97015bbfd06119e938c781a867d60b220fc7af59f6bd23fb8e2e61ef8fcaddd1ffc6080ab2f98f414158b2e143a713e9adb3464df16daf8a8a9b03
+"lucide@npm:1.6.0":
+  version: 1.6.0
+  resolution: "lucide@npm:1.6.0"
+  checksum: 10/9e4ac09d13c307744e01e6eaea147a611d02b93af4f54764c8cc0d01028605796c636e5f994db8e2abfe71f0aa55667576c1a015109a2a589934183353acaa3d
   languageName: node
   linkType: hard
 
