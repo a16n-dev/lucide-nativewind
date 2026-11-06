@@ -6906,9 +6906,9 @@ __metadata:
     cross-env: "npm:^10.0.0"
     jest: "npm:^30.0.2"
     jsdom: "npm:^26.0.0"
-    lucide: "npm:1.68.0"
-    lucide-react: "npm:1.68.0"
-    lucide-react-native: "npm:1.68.0"
+    lucide: "npm:1.69.0"
+    lucide-react: "npm:1.69.0"
+    lucide-react-native: "npm:1.69.0"
     nativewind: "npm:^4.1.23"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
@@ -6926,9 +6926,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide-react-native@npm:1.68.0":
-  version: 1.68.0
-  resolution: "lucide-react-native@npm:1.68.0"
+"lucide-react-native@npm:1.69.0":
+  version: 1.69.0
+  resolution: "lucide-react-native@npm:1.69.0"
   peerDependencies:
     "@types/react": "*"
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -6937,27 +6937,27 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/0e2de84823fd8ec6645ba5a0aa6998e1e84e06ffc63a6fc69afc7b3286b4cce5998f20da3b54f93f5ab60ba9f58e454b01ecdaa2a770d4aaf7630882ecb72c29
+  checksum: 10/829bb13dd29392e5e3aa56c03e68636e3d7529eaf6f2d89edf875c516de671782afda11cb15b5eeff5b109f87d30b73c489a98a1140c57bf3fffd116996ed178
   languageName: node
   linkType: hard
 
-"lucide-react@npm:1.68.0":
-  version: 1.68.0
-  resolution: "lucide-react@npm:1.68.0"
+"lucide-react@npm:1.69.0":
+  version: 1.69.0
+  resolution: "lucide-react@npm:1.69.0"
   peerDependencies:
     "@types/react": "*"
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/f67cb0427f07a1981be0dad0a106e61b75b670c760642de2889901c1500e6a1baed8eac0a6124e077c24b0013b71d8aafa9ec1cc01c5bc6b0cd7e8cb6db6c3b2
+  checksum: 10/f1b4226dc61636d64cfdad1b4bd48f0656101de4658f8d5223dbdfbc69a317ce2c1da7d1cb5edf8179bbc7798dae221fb5dc653bd834533c4c50234be8e3b4ae
   languageName: node
   linkType: hard
 
-"lucide@npm:1.68.0":
-  version: 1.68.0
-  resolution: "lucide@npm:1.68.0"
-  checksum: 10/0175be2a3c65a5230dcc4073b46d84851ee87bda767d42f9c219678f201e8621ba45e3396177885770e9869afdb9c589071e62eb5a7934e02e35844dd86dc22f
+"lucide@npm:1.69.0":
+  version: 1.69.0
+  resolution: "lucide@npm:1.69.0"
+  checksum: 10/d131b1c787d83bb77303fbd2bd08836f6fb978cac79fc620b2b19c66d921901d0652dac41282a1dfeba69beefed32422adf9566afc597db5c35303fbb641550f
   languageName: node
   linkType: hard
 
